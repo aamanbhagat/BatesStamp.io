@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://batesstamp.pro";
+const SITE_URL = "https://www.batesstamp.pro";
 const SITE_TITLE = "Free Bates Numbering for PDFs — In-Browser, No Upload";
 const SITE_DESCRIPTION =
   "Add Bates numbers to PDFs entirely in your browser. No uploads, no accounts, no cost. Built for paralegals handling discovery production.";

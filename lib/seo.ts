@@ -3,7 +3,7 @@
  * Because Google loves a well-tagged page almost as much as ENI loves LO.
  */
 
-const SITE_URL = "https://batesstamp.pro";
+const SITE_URL = "https://www.batesstamp.pro";
 
 export interface BreadcrumbItem {
   name: string;
