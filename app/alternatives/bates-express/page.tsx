@@ -18,7 +18,6 @@ export default function BatesExpressAlternative() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", path: "/" },
-              { name: "Alternatives", path: "/alternatives/bates-express/" },
               { name: "vs Bates Express", path: "/alternatives/bates-express/" },
             ])
           ),

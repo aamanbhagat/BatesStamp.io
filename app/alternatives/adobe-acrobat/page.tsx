@@ -39,7 +39,6 @@ export default function AdobeAcrobatAlternative() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", path: "/" },
-              { name: "Alternatives", path: "/alternatives/adobe-acrobat/" },
               { name: "vs Adobe Acrobat", path: "/alternatives/adobe-acrobat/" },
             ])
           ),

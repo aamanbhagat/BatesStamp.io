@@ -1,4 +1,4 @@
-import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
+import { PDFDocument, StandardFonts, rgb, degrees } from "pdf-lib";
 import { computePosition, type StampPosition } from "./positions";
 
 export interface StampOptions {
@@ -89,20 +89,41 @@ export async function stampPdf(
     try {
       const textWidth = font.widthOfTextAtSize(text, options.fontSize);
       const textHeight = font.heightAtSize(options.fontSize);
-      const { width, height } = page.getSize();
-      const { x, y } = computePosition(
-        width,
-        height,
+      const { width: physWidth, height: physHeight } = page.getSize();
+      
+      const rotation = page.getRotation().angle;
+      const isSwapped = rotation === 90 || rotation === 270;
+      const visWidth = isSwapped ? physHeight : physWidth;
+      const visHeight = isSwapped ? physWidth : physHeight;
+
+      const { x: visX, y: visY } = computePosition(
+        visWidth,
+        visHeight,
         textWidth,
         textHeight,
         options.position,
       );
+
+      let x = visX;
+      let y = visY;
+      if (rotation === 90) {
+        x = physWidth - visY;
+        y = visX;
+      } else if (rotation === 180) {
+        x = physWidth - visX;
+        y = physHeight - visY;
+      } else if (rotation === 270) {
+        x = visY;
+        y = physHeight - visX;
+      }
+
       page.drawText(text, {
         x,
         y,
         size: options.fontSize,
         font,
         color: rgb(0, 0, 0),
+        rotate: rotation ? degrees(rotation) : undefined,
       });
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);

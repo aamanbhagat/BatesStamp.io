@@ -53,6 +53,7 @@ export function BatesTool() {
   const hydrated = useRef(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOptions(loadStoredOptions());
     hydrated.current = true;
   }, []);
