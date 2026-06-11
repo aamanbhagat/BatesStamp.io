@@ -1,0 +1,33 @@
+{
+  "name": "BatesStamp",
+  "short_name": "BatesStamp",
+  "description": "Free Bates numbering for PDFs. Runs entirely in your browser.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

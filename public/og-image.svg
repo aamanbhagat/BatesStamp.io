@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4ede1"/>
+      <stop offset="100%" stop-color="#ebe1cf"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.4 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" filter="url(#noise)" opacity="0.3"/>
+
+  <text x="80" y="110" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#b8410e" font-weight="500">— FREE · IN-BROWSER · NO UPLOAD</text>
+
+  <text x="80" y="280" font-size="120" fill="#1a1612" font-weight="500" letter-spacing="-3">Bates Numbering</text>
+  <text x="80" y="400" font-size="120" fill="#1a1612" font-style="italic" font-weight="500" letter-spacing="-3">for PDFs.</text>
+
+  <line x1="80" y1="450" x2="1120" y2="450" stroke="#c9bfac" stroke-width="2"/>
+
+  <text x="80" y="510" font-size="32" fill="#4a4036" font-style="italic">Files never leave your computer. Stamping happens entirely in your browser.</text>
+
+  <g transform="translate(960 540)">
+    <rect x="-90" y="-30" width="200" height="60" rx="4" fill="#1a1612"/>
+    <text x="10" y="8" font-family="ui-monospace, Menlo, monospace" font-size="22" font-weight="700" fill="#f4ede1" text-anchor="middle" letter-spacing="3">batesstamp.io</text>
+  </g>
+</svg>

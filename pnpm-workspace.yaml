@@ -1,0 +1,7 @@
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+autoInstallPeers: true
+onlyBuiltDependencies:
+  - sharp
+  - unrs-resolver
