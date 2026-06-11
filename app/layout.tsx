@@ -154,6 +154,16 @@ export default function RootLayout({
             gtag('config', 'G-NYKSXND9QM');
           `}
         </Script>
+        <Script id="propeller-banner" strategy="lazyOnload">
+          {`
+            (function(s){s.dataset.zone='11132421',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+          `}
+        </Script>
+        <Script id="propeller-vignette" strategy="lazyOnload">
+          {`
+            (function(s){s.dataset.zone='11132423',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+          `}
+        </Script>
         <Analytics />
         <a
           href="#main"
@@ -191,6 +201,14 @@ export default function RootLayout({
               >
                 FAQ
               </Link>
+              <a
+                href="https://omg10.com/4/11132430"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 rounded-md bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                Support Us ❤️
+              </a>
             </nav>
           </div>
         </header>
