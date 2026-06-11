@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { BatesTool } from "@/components/BatesTool";
 import Link from "next/link";
+import { BatesToolWrapper as BatesTool } from "@/components/BatesToolWrapper";
 import { faqPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
