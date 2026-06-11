@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Fraunces, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { FooterYear } from "@/components/FooterYear";
@@ -153,6 +154,7 @@ export default function RootLayout({
             gtag('config', 'G-NYKSXND9QM');
           `}
         </Script>
+        <Analytics />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-emerald-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-neutral-950 focus:outline-none focus:ring-2 focus:ring-emerald-300"
