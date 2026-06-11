@@ -200,35 +200,35 @@ export default function RootLayout({
                 <h2 className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-neutral-400">
                   The tool
                 </h2>
-                <ul className="space-y-1.5">
-                  <li><Link href="/" className="hover:text-emerald-400">Bates numbering</Link></li>
-                  <li><Link href="/how-it-works/" className="hover:text-emerald-400">How it works</Link></li>
-                  <li><Link href="/privacy-verified/" className="hover:text-emerald-400">Privacy verified</Link></li>
+                <ul className="space-y-0.5">
+                  <li><Link href="/" className="block py-2 hover:text-emerald-400">Bates numbering</Link></li>
+                  <li><Link href="/how-it-works/" className="block py-2 hover:text-emerald-400">How it works</Link></li>
+                  <li><Link href="/privacy-verified/" className="block py-2 hover:text-emerald-400">Privacy verified</Link></li>
                 </ul>
               </div>
               <div>
                 <h2 className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-neutral-400">
                   Audiences
                 </h2>
-                <ul className="space-y-1.5">
-                  <li><Link href="/for-paralegals/" className="hover:text-emerald-400">For paralegals</Link></li>
-                  <li><Link href="/faq/" className="hover:text-emerald-400">Frequently asked questions</Link></li>
+                <ul className="space-y-0.5">
+                  <li><Link href="/for-paralegals/" className="block py-2 hover:text-emerald-400">For paralegals</Link></li>
+                  <li><Link href="/faq/" className="block py-2 hover:text-emerald-400">Frequently asked questions</Link></li>
                 </ul>
               </div>
               <div>
                 <h2 className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-neutral-400">
                   Alternatives
                 </h2>
-                <ul className="space-y-1.5">
-                  <li><Link href="/alternatives/adobe-acrobat/" className="hover:text-emerald-400">vs Adobe Acrobat Pro</Link></li>
-                  <li><Link href="/alternatives/bates-express/" className="hover:text-emerald-400">vs Bates Express</Link></li>
+                <ul className="space-y-0.5">
+                  <li><Link href="/alternatives/adobe-acrobat/" className="block py-2 hover:text-emerald-400">vs Adobe Acrobat Pro</Link></li>
+                  <li><Link href="/alternatives/bates-express/" className="block py-2 hover:text-emerald-400">vs Bates Express</Link></li>
                 </ul>
               </div>
             </nav>
             <p className="mt-8 border-t border-neutral-900 pt-6 text-center text-neutral-400">
               BatesStamp is free, open, and processes everything in your browser.
               {" "}
-              <Link href="/privacy-verified/" className="text-emerald-400 hover:underline">
+              <Link href="/privacy-verified/" className="underline text-emerald-400 hover:text-emerald-300">
                 Privacy verified
               </Link>
               .
