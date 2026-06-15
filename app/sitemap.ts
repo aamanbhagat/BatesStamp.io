@@ -14,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-verified/",
     "/alternatives/adobe-acrobat/",
     "/alternatives/bates-express/",
+    "/articles/",
+    "/articles/definitive-guide-to-bates-numbering/",
+    "/articles/best-practices-confidential-documents/",
+    "/articles/paralegal-discovery-workflows/",
+    "/articles/acrobat-vs-batesstamp/",
+    "/articles/history-of-bates-stamp/",
   ];
   return routes.map((route) => ({
     url: `${SITE_URL}${route}`,

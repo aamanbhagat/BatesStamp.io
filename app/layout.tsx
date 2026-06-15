@@ -228,11 +228,12 @@ export default function RootLayout({
               </div>
               <div>
                 <h2 className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-neutral-400">
-                  Audiences
+                  Resources
                 </h2>
                 <ul className="space-y-0.5">
                   <li><Link href="/for-paralegals/" className="block py-2 hover:text-emerald-400">For paralegals</Link></li>
                   <li><Link href="/faq/" className="block py-2 hover:text-emerald-400">Frequently asked questions</Link></li>
+                  <li><Link href="/articles/" className="block py-2 hover:text-emerald-400">Legal tech articles</Link></li>
                 </ul>
               </div>
               <div>
