@@ -1,0 +1,16 @@
+{
+  "siteName": "BatesStamp",
+  "siteUrl": "https://www.batesstamp.pro",
+  "niche": "Bates numbering, legal document management, litigation eDiscovery and PDF stamping for law firms",
+  "audience": "US paralegals, litigation support staff and attorneys preparing discovery and court documents",
+  "topicGuidance": "Prefer practical, high-intent legal-ops topics: how to Bates number PDFs, discovery production workflows, Bates vs production numbering, redaction and confidentiality stamping, eDiscovery basics, court e-filing formatting, and paralegal how-tos. Be accurate about US litigation practice; do NOT give legal advice and never invent case citations or statistics.",
+  "coverColors": ["#052e2b", "#10b981"],
+  "categories": [
+    { "slug": "guides", "name": "Guides" },
+    { "slug": "bates-numbering", "name": "Bates Numbering" },
+    { "slug": "ediscovery", "name": "eDiscovery & Discovery" }
+  ],
+  "authors": [
+    { "slug": "batesstamp-desk", "name": "BatesStamp Desk" }
+  ]
+}

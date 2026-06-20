@@ -201,6 +201,12 @@ export default function RootLayout({
               >
                 FAQ
               </Link>
+              <Link
+                href="/blog/"
+                className="rounded px-2 py-2 hover:text-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                Blog
+              </Link>
               <a
                 href="https://omg10.com/4/11132430"
                 target="_blank"
@@ -234,6 +240,7 @@ export default function RootLayout({
                   <li><Link href="/for-paralegals/" className="block py-2 hover:text-emerald-400">For paralegals</Link></li>
                   <li><Link href="/faq/" className="block py-2 hover:text-emerald-400">Frequently asked questions</Link></li>
                   <li><Link href="/articles/" className="block py-2 hover:text-emerald-400">Legal tech articles</Link></li>
+                  <li><Link href="/blog/" className="block py-2 hover:text-emerald-400">Blog</Link></li>
                 </ul>
               </div>
               <div>

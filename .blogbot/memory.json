@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "siteBirth": "2026-06-20",
+  "lastRunAt": "2026-06-20T13:57:35.727Z",
+  "runs": [
+    {
+      "ts": "2026-06-20T13:25:10.270Z",
+      "phase": "seed",
+      "category": "bates-numbering",
+      "keywordTier": "long-tail",
+      "primaryKeyword": "how to Bates number PDFs for discovery production",
+      "title": "How to Bates Number PDFs for Discovery Production",
+      "slug": "how-to-bates-number-pdfs-for-discovery-production",
+      "wordCount": 5787
+    },
+    {
+      "ts": "2026-06-20T13:29:32.329Z",
+      "phase": "seed",
+      "category": "ediscovery",
+      "keywordTier": "long-tail",
+      "primaryKeyword": "what is Bates numbering in eDiscovery",
+      "title": "What Is Bates Numbering in eDiscovery? A Paralegal's Guide",
+      "slug": "what-is-bates-numbering-in-ediscovery-a-paralegals-guide",
+      "wordCount": 2328
+    },
+    {
+      "ts": "2026-06-20T13:51:28.699Z",
+      "phase": "seed",
+      "category": "bates-numbering",
+      "keywordTier": "long-tail",
+      "primaryKeyword": "how to Bates stamp produced documents for opposing counsel",
+      "title": "How to Bates Stamp Produced Documents for Opposing Counsel",
+      "slug": "how-to-bates-stamp-produced-documents-for-opposing-counsel",
+      "wordCount": 2204
+    },
+    {
+      "ts": "2026-06-20T13:54:04.630Z",
+      "phase": "seed",
+      "category": "guides",
+      "keywordTier": "long-tail",
+      "primaryKeyword": "how to Bates number email attachments for discovery",
+      "title": "How to Bates Number Attachments in Email Discovery Productions",
+      "slug": "how-to-bates-number-attachments-in-email-discovery-productions",
+      "wordCount": 2883
+    },
+    {
+      "ts": "2026-06-20T13:57:35.727Z",
+      "phase": "seed",
+      "category": "guides",
+      "keywordTier": "long-tail",
+      "primaryKeyword": "how to Bates stamp redacted documents for discovery production",
+      "title": "How to Bates Stamp Redacted Documents for Discovery Production",
+      "slug": "how-to-bates-stamp-redacted-documents-for-discovery-production",
+      "wordCount": 2858
+    }
+  ],
+  "usedKeywords": [
+    "how to Bates number PDFs for discovery production",
+    "what is Bates numbering in eDiscovery",
+    "how to Bates stamp produced documents for opposing counsel",
+    "how to Bates number email attachments for discovery",
+    "how to Bates stamp redacted documents for discovery production"
+  ],
+  "usedTitles": [
+    "How to Bates Number PDFs for Discovery Production",
+    "What Is Bates Numbering in eDiscovery? A Paralegal's Guide",
+    "How to Bates Stamp Produced Documents for Opposing Counsel",
+    "How to Bates Number Attachments in Email Discovery Productions",
+    "How to Bates Stamp Redacted Documents for Discovery Production"
+  ],
+  "usedSlugs": [
+    "how-to-bates-number-pdfs-for-discovery-production",
+    "what-is-bates-numbering-in-ediscovery-a-paralegals-guide",
+    "how-to-bates-stamp-produced-documents-for-opposing-counsel",
+    "how-to-bates-number-attachments-in-email-discovery-productions",
+    "how-to-bates-stamp-redacted-documents-for-discovery-production"
+  ],
+  "clusters": {
+    "Bates Numbering": {
+      "members": [
+        "how-to-bates-number-pdfs-for-discovery-production",
+        "what-is-bates-numbering-in-ediscovery-a-paralegals-guide",
+        "how-to-bates-stamp-produced-documents-for-opposing-counsel",
+        "how-to-bates-number-attachments-in-email-discovery-productions",
+        "how-to-bates-stamp-redacted-documents-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "how to Bates number PDFs for discovery production",
+        "what is Bates numbering in eDiscovery",
+        "how to Bates stamp produced documents for opposing counsel",
+        "how to Bates number email attachments for discovery",
+        "how to Bates stamp redacted documents for discovery production"
+      ]
+    },
+    "Discovery Production": {
+      "members": [
+        "how-to-bates-number-pdfs-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "how to Bates number PDFs for discovery production"
+      ]
+    },
+    "PDF Stamping": {
+      "members": [
+        "how-to-bates-number-pdfs-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "how to Bates number PDFs for discovery production"
+      ]
+    },
+    "Paralegal How-To": {
+      "members": [
+        "how-to-bates-number-pdfs-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "how to Bates number PDFs for discovery production"
+      ]
+    },
+    "eDiscovery": {
+      "members": [
+        "what-is-bates-numbering-in-ediscovery-a-paralegals-guide",
+        "how-to-bates-stamp-produced-documents-for-opposing-counsel",
+        "how-to-bates-number-attachments-in-email-discovery-productions",
+        "how-to-bates-stamp-redacted-documents-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "what is Bates numbering in eDiscovery",
+        "how to Bates stamp produced documents for opposing counsel",
+        "how to Bates number email attachments for discovery",
+        "how to Bates stamp redacted documents for discovery production"
+      ]
+    },
+    "Document Production": {
+      "members": [
+        "what-is-bates-numbering-in-ediscovery-a-paralegals-guide",
+        "how-to-bates-stamp-produced-documents-for-opposing-counsel",
+        "how-to-bates-number-attachments-in-email-discovery-productions",
+        "how-to-bates-stamp-redacted-documents-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "what is Bates numbering in eDiscovery",
+        "how to Bates stamp produced documents for opposing counsel",
+        "how to Bates number email attachments for discovery",
+        "how to Bates stamp redacted documents for discovery production"
+      ]
+    },
+    "Litigation Support": {
+      "members": [
+        "what-is-bates-numbering-in-ediscovery-a-paralegals-guide"
+      ],
+      "primaryKeywords": [
+        "what is Bates numbering in eDiscovery"
+      ]
+    },
+    "Adobe Acrobat": {
+      "members": [
+        "how-to-bates-stamp-produced-documents-for-opposing-counsel"
+      ],
+      "primaryKeywords": [
+        "how to Bates stamp produced documents for opposing counsel"
+      ]
+    },
+    "Redaction": {
+      "members": [
+        "how-to-bates-stamp-redacted-documents-for-discovery-production"
+      ],
+      "primaryKeywords": [
+        "how to Bates stamp redacted documents for discovery production"
+      ]
+    }
+  },
+  "phaseHistory": [
+    {
+      "ts": "2026-06-20T13:25:10.270Z",
+      "phase": "seed"
+    }
+  ],
+  "notes": [
+    "For the next run, create a cluster-bridging post targeting \"how to Bates stamp produced documents for opposing counsel\" that specifically compares using Adobe Acrobat versus dedicated eDiscovery software, and internally link it to both existing guides to capture users transitioning from basic PDF st",
+    "For the next run, target the native file formatting gap by publishing a guide on \"How to Bates Stamp Native Excel Files for eDiscovery\" and internally link it to the email attachments post to build out a comprehensive \"Discovery Production Formats\" cluster."
+  ]
+}

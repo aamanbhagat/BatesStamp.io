@@ -1,0 +1,224 @@
+---
+title: How to Bates Number Attachments in Email Discovery Productions
+description: >-
+  Learn how to Bates number email attachments for discovery productions,
+  maintain parent-child family relationships, and stamp PST files correctly.
+category: guides
+tags:
+  - Bates Numbering
+  - Document Production
+  - eDiscovery
+author: batesstamp-desk
+publishedAt: '2026-06-20'
+cover: /blog/how-to-bates-number-attachments-in-email-discovery-productions/cover.svg
+coverAlt: How to Bates Number Attachments in Email Discovery Productions
+status: published
+featured: false
+sponsored: false
+---
+
+Learning how to Bates number email attachments for discovery is one of the most error-prone tasks a litigation paralegal faces, because emails and their attachments are not flat documents — they exist in family units that must be tracked together throughout production. This guide walks through the full workflow, from PST export through load file delivery, with specific attention to preserving parent-child relationships and avoiding duplicate stamps across email threads.
+
+
+<figure>
+  <img src="/blog/how-to-bates-number-attachments-in-email-discovery-productions/figure.svg" alt="Typical Email-to-Attachment Ratio in Productions" width="920" height="368" />
+  <figcaption>Typical Email-to-Attachment Ratio in Productions</figcaption>
+</figure>
+
+## Why Email Attachments Need Special Bates Numbering Treatment
+
+If you have ever [Bates number PDFs for discovery production](/blog/how-to-bates-number-pdfs-for-discovery-production) on a flat document set, you know the basic drill: apply a sequential identifier to each page, verify, and produce. Email productions add a layer of complexity that flat-document workflows do not address. A single email may carry multiple attachments, those attachments may themselves contain embedded files, and the same attachment may appear across dozens of emails in a thread. Each of those relationships must be preserved in the production so opposing counsel can reconstruct what was sent, when, and to whom.
+
+The core problem is that a Bates stamp is a page-level identifier, but email family relationships are document-level. If you stamp a five-page email and its three attachments — a two-page Word document, a single-page spreadsheet, and a ten-page PDF — you end up with 18 pages that need sequential Bates numbers, but the production load file also needs to record which Bates range belongs to the parent email and which ranges belong to each child attachment. Lose that mapping and you have produced pages that opposing counsel cannot reliably navigate.
+
+There is also a practical scale issue. A mid-size corporate email custodian can produce 20,000 to 80,000 pages when attachments are included. Manual stamping in Adobe Acrobat is feasible for a few hundred documents but becomes untenable at that volume. Understanding when to use manual tools and when to move to dedicated eDiscovery software is part of getting the workflow right.
+
+## Understanding Parent-Child Relationships in Email Productions
+
+Every email production revolves around the concept of a document family. The parent is the email message itself. The children are the files attached to that email. If an attachment contains embedded objects — for example, an Excel file with a linked PowerPoint slide — those embedded objects may be treated as grandchildren, depending on your processing tool and the production protocol.
+
+### How Family Relationships Are Represented
+
+The parent-child link is maintained through metadata fields in the production load file, not through the Bates stamp itself. The standard fields include:
+
+| Field | Purpose | Example |
+|---|---|---|
+| `BEGATTACH` | Bates number of the first page of a child document | CORP-000045 |
+| `ENDATTACH` | Bates number of the last page of a child document | CORP-000046 |
+| `ATTACHRANGE` | Full Bates range of the child | CORP-000045 to CORP-000046 |
+| `PARENTBATES` | Bates number of the parent email | CORP-000042 |
+| `ATTACHCOUNT` | Number of attachments on the parent email | 3 |
+| `FAMILYID` | Unique identifier grouping the family | FAM-000117 |
+
+When [parent child Bates numbering eDiscovery](/blog/what-is-bates-numbering-in-ediscovery-a-paralegals-guide) is done correctly, opposing counsel can load the production into Relativity, Reveal, or another review platform and instantly see every attachment grouped under its parent email. When it is done incorrectly — or not at all — the production arrives as a pile of disconnected PDFs that require manual reconstruction.
+
+### Family Bates Numbering Email Chains
+
+Email threads add another wrinkle. A forwarded email chain may contain the original message, two replies, and a final forward, each with its own attachments. Most eDiscovery tools treat each unique email message in the chain as its own parent document with its own family. This means a single PST export can generate hundreds of overlapping families, some sharing the same attachment files.
+
+Family Bates numbering email chains requires a decision point in the production protocol: do you treat each message in the thread as a separate family, or do you treat the entire thread as one family? The prevailing practice in 2026 is to treat each unique email message as a separate document with its own family, because each message is a distinct communication with its own metadata (sender, recipient, date, recipients on the BCC line). The thread relationship is preserved through conversation index metadata, not through family grouping.
+
+## How to Bates Number Email Attachments Using Adobe Acrobat
+
+For small productions — under 500 documents, say — or for supplemental productions that fall outside the main processing run, you can Bates stamp email attachments manually in Adobe Acrobat Pro. The workflow assumes you have already exported the emails and attachments from the PST or mailbox into individual PDFs.
+
+### Step-by-Step Acrobat Workflow
+
+1. **Export and convert.** Use a tool like Adobe Acrobat's PDFMaker, a PST-to-PDF exporter, or your review platform's export function to convert each email and each attachment to a separate PDF. Name the files in a way that preserves family order, for example `CORP-000042_EMAIL.pdf`, `CORP-000043_Attachment01.pdf`, `CORP-000044_Attachment02.pdf`.
+
+2. **Combine into family binders (optional).** Some firms combine each email and its attachments into a single multi-document PDF with bookmark separators. This makes manual stamping easier but can complicate load file creation because you need to record page offsets for each child document within the combined PDF.
+
+3. **Apply the Bates stamp.** In Acrobat Pro, go to **Tools → Edit PDF → More → Bates Numbering → Add**. Select the files in family order. Configure the stamp position, font size, prefix, and starting number. Acrobat will apply sequential numbers across all selected files in the order you arranged them.
+
+4. **Record the Bates ranges.** After stamping, document the beginning and ending Bates number for each file. If you stamped a combined family PDF, note the page range within the PDF that corresponds to each child attachment. This information goes into your load file.
+
+5. **Export the stamped files.** Save the stamped PDFs to your production directory, organized by custodian and family.
+
+### Limitations of the Acrobat Approach
+
+Acrobat does not understand email families. It treats every PDF as a standalone file. This means you are responsible for maintaining the parent-child mapping manually, which is manageable at small scale but becomes a significant QC burden as volume grows. Acrobat also does not generate a production load file — you will need to build one in Excel or another tool, which introduces manual data entry risk.
+
+## How Dedicated eDiscovery Software Handles Family Bates Stamping
+
+For productions of any meaningful size, dedicated eDiscovery processing tools handle family Bates stamping automatically. Platforms like Relativity, Nuix, Logikcull, Everlaw, and DISCO all follow a similar pattern.
+
+### The Automated Workflow
+
+1. **Ingest the PST or mailbox.** The processing engine parses the PST, extracts each email message and each attachment, and builds a family tree based on the email's internal structure.
+
+2. **Convert to TIFF or PDF.** Each email and attachment is rendered to a production image format. Native files (Excel, Word, PowerPoint) may be produced as natives alongside the image, depending on the protocol.
+
+3. **Apply Bates stamps.** The tool applies sequential Bates numbers to each page in family order — parent email first, then attachments in the order they appear in the email — and records the Bates range for each document in the processing database.
+
+4. **Generate the load file.** The tool exports a DAT or OPT load file containing the metadata, Bates ranges, and family relationships for every document in the production. This is the file opposing counsel loads into their review platform.
+
+### Comparison of Common eDiscovery Tools
+
+| Tool | Family Handling | Load File Format | Native + Image Production |
+|---|---|---|---|
+| Relativity | Automatic family grouping via processing | DAT, OPT, LFP | Yes, per-document |
+| Nuix | Automatic, with deduplication options | DAT, OPT, LFP | Yes, per-document |
+| Logikcull | Automatic, built-in | DAT | Yes, per-document |
+| Everlaw | Automatic, with thread grouping | DAT, OPT | Yes, per-document |
+| DISCO | Automatic, built-in | DAT | Yes, per-document |
+
+The key advantage of these tools is that family relationships are preserved structurally rather than reconstructed manually. When you [Bates stamp produced documents for opposing counsel](/blog/how-to-bates-stamp-produced-documents-for-opposing-counsel) from a processing tool, the load file is the authoritative record of the family structure.
+
+## Avoiding Duplicate Bates Numbers Across Email Threads
+
+One of the most common questions paralegals ask is: if the same PowerPoint attachment appears in 15 emails across a thread, does each instance get its own Bates number? The answer depends on your production protocol, but the default in most cases is yes.
+
+### Deduplication Options
+
+| Approach | How It Works | When to Use |
+|---|---|---|
+| Per-family stamping (default) | Each instance of the attachment in each email family receives its own unique Bates range | Standard production, most cases |
+| Global deduplication | Only the first instance of a file is produced; subsequent instances are replaced with a cross-reference to the first Bates range | High-volume productions with custodian overlap, when the ESI protocol permits |
+| Custodian-level deduplication | Deduplicate within a single custodian's production but produce duplicate copies across custodians | Multi-custodian productions where cross-custodian duplication is expected to be minimal |
+| Hash-based deduplication | Files are compared by MD5 or SHA-1 hash; identical hashes are treated as duplicates | Technical approach underlying all deduplication methods |
+
+### Why Default Per-Family Stamping Is Standard
+
+The reason most productions stamp each instance separately is traceability. If opposing counsel asks, "Did John Smith receive this attachment?" you need to be able to point to the specific Bates number in the specific email family that shows the attachment in John Smith's mailbox. If you globally deduplicated the attachment and only produced it once, you lose that per-recipient traceability unless your load file includes robust cross-references.
+
+The production protocol — usually negotiated in the Rule 26(f) conference and codified in the ESI agreement — should specify which deduplication approach applies. If the protocol is silent, default to per-family stamping and note the decision in your production cover letter.
+
+## Best Practices for PST File Bates Numbering Workflows
+
+PST files remain a common source format for email discovery productions, particularly from custodians who used Outlook archive features. A sound email attachment Bates stamping workflow for PST files follows a consistent sequence.
+
+### Pre-Processing
+
+- **Inventory the PST files before processing.** Record custodian name, date range, file size, and item count for each PST. This becomes your processing log and helps you spot missing data later.
+- **Verify PST integrity.** Run `scanpst.exe` or a comparable tool to check for corruption before processing. A corrupted PST can cause processing tools to skip emails silently.
+- **Confirm the ESI protocol.** Verify the agreed-upon Bates prefix, number of digits, deduplication approach, and production format (TIFF, PDF, native, or mixed) before you start processing.
+
+### Processing
+
+- **Process in custodian order.** This keeps Bates ranges organized and makes the production log easier to follow.
+- **Use consistent Bates prefixes per custodian or per production.** Common patterns include `CUSTODIAN-INITIAL-000001` or `PROD-000001`. Avoid changing prefixes mid-production.
+- **Let the tool manage family ordering.** Do not manually reorder documents after processing unless you have a specific reason — the tool's family order is based on the email structure and is more reliable than manual sorting.
+
+### Post-Processing
+
+- **Generate the load file immediately after stamping.** Do not wait — the tool has the family relationships fresh in its database at that point.
+- **Run a family integrity report.** Most tools can generate a report listing every family and its member documents. Review this for orphans — attachments with no parent email — and investigate any anomalies.
+- **Maintain a production log.** Record the Bates range, custodian, PST file name, item count, and page count for each production batch. This log is your reference when opposing counsel raises a question about a specific Bates number.
+
+## Quality Control Checklist for Email Attachment Productions
+
+A structured QC pass catches problems before they reach opposing counsel. Run through this checklist for every email production batch.
+
+### Pre-Stamping QC
+
+- PST files inventoried and integrity-verified
+- ESI protocol confirmed for Bates prefix, digit count, deduplication, and production format
+- Processing tool configured for family-level extraction with attachments
+- Deduplication settings match the ESI protocol
+
+### Post-Stamping QC
+
+- Bates numbers are sequential with no gaps across the entire production
+- Every attachment has a Bates range recorded in the load file
+- Every family has a parent email with the correct `PARENTBATES` value
+- `BEGATTACH` and `ENDATTACH` fields in the load file match the actual stamped PDFs
+- No orphan attachments exist — every child has a parent
+- No duplicate Bates numbers exist across the production
+- Privileged documents have been redacted or withheld per the privilege log
+- Email metadata fields (From, To, CC, BCC, Date Sent, Subject) are populated in the load file
+- Attachment file names are preserved in the metadata
+- A sample of 5 percent of families has been manually verified against the source PST
+
+### Load File QC
+
+- Load file opens cleanly in the target review platform
+- Field delimiters do not conflict with metadata content
+- Date fields are in the agreed format (typically `MM/DD/YYYY` or `YYYY-MM-DD`)
+- Page counts in the load file match the actual page counts of the stamped PDFs
+- Family counts match the processing tool's family report
+
+## Common Email Bates Numbering Mistakes to Avoid
+
+Even experienced paralegals hit recurring problems with email attachment productions. Here are the mistakes that cause the most production disputes.
+
+### Stamping the Combined Family PDF Without Recording Child Ranges
+
+When you combine an email and its attachments into one PDF for stamping in Acrobat, the resulting PDF has a single continuous Bates sequence. If you do not record which page ranges correspond to which child attachment, you cannot build an accurate load file. Opposing counsel will receive a 30-page PDF with Bates numbers CORP-000050 through CORP-000079 and no way to know where the email ends and the first attachment begins. Always record child page offsets when using the combined-PDF approach.
+
+### Treating Email Threads as Single Families
+
+A forwarded email chain is not one family — it is multiple emails, each with its own metadata and potentially its own attachments. Treating the entire chain as one family produces a load file where the parent document has multiple senders, multiple dates, and multiple recipient lists, which breaks review platform filtering. Process each unique message as its own parent.
+
+### Failing to Deduplicate Per the ESI Protocol
+
+If the protocol calls for global deduplication and you produce every duplicate instance, you inflate the production volume and potentially create inconsistent privilege calls across identical documents. If the protocol calls for per-family stamping and you globally deduplicate, you lose recipient traceability. Match the deduplication setting to the protocol every time.
+
+### Stamping Native Files Instead of Rendered Images
+
+Bates stamps belong on the produced image — the TIFF or PDF that opposing counsel will view. Stamping native Excel or Word files directly is possible but creates version-control problems and can alter file metadata. Produce natives alongside stamped images rather than stamping the native file itself.
+
+### Omitting the AttachRange From the Load File
+
+The `ATTACHRANGE` field is what allows opposing counsel to jump directly to a specific attachment within a family. If this field is blank or populated inconsistently, the production is technically incomplete even if every page has a Bates number. Run a QC report that flags any document with a missing or malformed `ATTACHRANGE` value before you deliver.
+
+### Not Testing the Load File Before Delivery
+
+A load file that looks correct in Excel may fail to import in Relativity because of a delimiter conflict, an encoding issue, or a date format mismatch. Always test-import the load file into a blank workspace — ideally the same platform opposing counsel will use — before sending the production. Catching a load file error before delivery saves a recall and re-production that can cost thousands of dollars and days of delay.
+
+## Frequently asked questions
+
+### Do email attachments need their own Bates numbers or share the parent email's number?
+
+Email attachments receive their own unique Bates numbers, but they are tracked alongside the parent email's Bates number to preserve the family relationship in the production load file.
+
+### How do you Bates number attachments within a PST file?
+
+You export emails and attachments from the PST using an eDiscovery tool, apply Bates stamps to each exported PDF, and generate a load file that maps parent-child relationships for opposing counsel.
+
+### What happens if the same attachment appears in multiple emails in a production?
+
+Each instance of the attachment in a different email family receives its own unique Bates number to maintain traceability, though some protocols allow deduplication with cross-references per the production agreement.
+
+### Should Bates numbers on email attachments include the parent email number for reference?
+
+Standard practice gives each attachment an independent sequential Bates number; the parent-child link is maintained in the metadata load file rather than encoded in the Bates stamp itself.
